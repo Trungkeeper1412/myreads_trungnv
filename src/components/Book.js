@@ -1,5 +1,6 @@
 import React from "react";
 import BookStatusChanger from "./BookStatusChanger";
+import PropTypes from "prop-types";
 
 function Book({ book, onBookMoving }) {
   return (
@@ -26,5 +27,16 @@ function Book({ book, onBookMoving }) {
     </li>
   );
 }
+
+Book.propTypes = {
+  book: PropTypes.shape({
+    imageLinks: PropTypes.shape({
+      thumbnail: PropTypes.string,
+    }).isRequired,
+    title: PropTypes.string.isRequired,
+    authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+  onBookMoving: PropTypes.func.isRequired,
+};
 
 export default Book;
