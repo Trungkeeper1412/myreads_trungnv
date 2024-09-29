@@ -14,9 +14,9 @@ const SearchBar = ({ onBookSearching, onSearchResetting }) => {
   return (
     <div className="search-books-bar">
       <Link to="/">
-        <a className="close-search" onClick={onSearchResetting}>
+        <button className="close-search" onClick={onSearchResetting}>
           Close
-        </a>
+        </button>
       </Link>
       <div className="search-books-input-wrapper">
         <input
