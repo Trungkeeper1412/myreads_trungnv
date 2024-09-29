@@ -15,7 +15,7 @@ function App() {
       setBooksArray(res);
     };
     callGetAllBooksAPI();
-  }, [booksArray]);
+  }, []);
 
   const moveBook = async (book, shelf) => {
     try {
